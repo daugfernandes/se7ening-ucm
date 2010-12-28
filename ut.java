@@ -23,20 +23,25 @@
  * 
  */
 
-package s7ucm.test;
+import s7ucm.test.cTest;
 
-public class cTest {
-    
-    private String s;
+public class ut {
 
-    public cTest(){
-	setS("");
+    public static void main(String[] args) {
+
+	String aux = "aa";
+
+	cTest t1 = new cTest();
+	assert (t1.getS()=="");
+
+	t1.setS("david");
+	assert (t1.getS()=="david");
+
+	cTest t2 = new cTest(aux);
+	assert (t2.getS()==aux);
+	
+	t2.setS("patrícia");
+	assert (t2.getS()=="patrícia");
+
     }
-
-    public cTest(String p_s){
-	setS(p_s);
-    }
-
-    public String getS() { return s;}
-    public void setS(String p_value) { s=p_value;}
 }
