@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : config.xml
+    Created on : February 18, 2010, 9:54 PM
+    Author     : David Fernandes
+    Description: Purpose of the document follows.
+-->
+
+<root>
+
+    <database>
+
+        <driver>org.gjt.mm.mysql.Driver</driver>
+        <server>localhost</server>
+        <port>3306</port>
+        <name>ucmanage</name>
+        <ph_username>david</ph_username>
+        <home_username>root</home_username>
+        <username>david</username>
+        <password>buendia27</password>
+
+        <!-- url tag's:
+           server: #SN#
+           port: #PN#
+           name: #DB#
+           username: #UN#
+           password: #PWD#
+         -->
+        <url>jdbc:mysql://#SN#:#PN#/#DB#</url>
+
+	<procedures>
+	    <cCientificArea>
+	        <insert>{ ? = call CIENTIFICAREA_ADD(?,?) }</insert>
+		<update>{ ? = call CIENTIFICAREA_UPD(?,?) }</update>
+		<delete>{ ? = call CIENTIFICAREA_DEL(?) }</delete>
+		<list>SELECT ID, NAME FROM CIENTIFICAREA ORDER BY NAME</list>
+            </cCientificArea>
+	</procedures>
+	
+
+    </database>
+
+    <log>error.log</log>
+
+</root>
