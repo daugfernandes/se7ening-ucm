@@ -32,16 +32,16 @@ public class ut {
 	String aux = "aa";
 
 	cTest t1 = new cTest();
-	assert (t1.getS()=="");
+	assert t1.getS()=="";
 
 	t1.setS("david");
-	assert (t1.getS()=="david");
+	assert t1.getS()=="david";
 
 	cTest t2 = new cTest(aux);
-	assert (t2.getS()==aux);
+	assert t2.getS()==aux;
 	
 	t2.setS("patrícia");
-	assert (t2.getS()=="patrícia");
+	assert t2.getS()=="patrícia";
 
     }
 }
