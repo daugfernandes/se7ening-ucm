@@ -29,6 +29,8 @@ package s7ucm.utilities;
  */
 public class cException extends Exception {
 
+    public final static long serialVersionUID = 1;
+
     public cException() {
 
     }
