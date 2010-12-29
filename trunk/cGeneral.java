@@ -25,8 +25,6 @@
 
 package s7ucm.base;
 
-import java.lang.Class;
-
 /**
  *
  * @author David Fernandes
@@ -83,7 +81,7 @@ public class cGeneral {
         try
         {
             String className = conf.driver;
-            Class driverObject = Class.forName(className);
+            Object driverObject = Class.forName(className);
             return(true);
         }
         catch (Exception e)
