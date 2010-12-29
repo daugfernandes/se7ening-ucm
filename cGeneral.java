@@ -25,6 +25,8 @@
 
 package s7ucm.base;
 
+import java.lang.Class;
+
 /**
  *
  * @author David Fernandes
