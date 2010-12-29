@@ -53,7 +53,7 @@ public class cGeneral {
 
     /**
      * Get config information from a xml file
-     * @param configxml Xml file from which to get teh config info
+     * @param configxml Xml file from which to get the config info
      * @return cConfig object from configxml
      */
     public static cConfig getConfig(String configxml)
