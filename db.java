@@ -27,6 +27,7 @@ package s7ucm.base;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import org.gjt.mm.mysql.Driver;
 
 /**
  * The main class of the application.
