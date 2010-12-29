@@ -14,10 +14,11 @@
         <driver>org.gjt.mm.mysql.Driver</driver>
         <server>localhost</server>
         <port>3306</port>
-        <name>ucmanage</name>
+        <name>s7ucm</name>
         <ph_username>david</ph_username>
         <home_username>root</home_username>
-        <username>david</username>
+        <toshiba_username>s7ucm</home_username>
+        <username>s7ucm</username>
         <password>buendia27</password>
 
         <!-- url tag's:
