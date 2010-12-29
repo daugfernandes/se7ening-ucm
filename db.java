@@ -23,32 +23,35 @@
  *
  */
 
-package s7ucm.base;
-
-import java.sql.*;
+import s7ucm.base.cGeneral;
+import java.sql.Connection;
+import java.sql.DriverManager;
 
 /**
  * The main class of the application.
  */
 public class db {
 
-    //    static Connection connection;
+    static Connection connection;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
-	System.out.println(initDatabase());
+	if(initDatabase()) {
+	    System.out.println("Database open ok.");
+	} else {
+	    System.out.println("Error opening database.");
+	}
 
     }
 
-    private static boolean initDatabase() {
+    private static boolean initDatabase() throws Exception {
 
-        //cGeneral.cConfig conf=cGeneral.getConfig("config.xml");
-	//System.out.println(conf.server);
-	return true;
+	cGeneral.cConfig conf=cGeneral.getConfig("config.xml");
+	System.out.println(conf.server);
 
-        /*boolean DriverOk=cGeneral.testDriverInstalation(conf);
+        boolean DriverOk=cGeneral.testDriverInstalation(conf);
 
-        if(DriverOk)
+	if(DriverOk)
         {
             String driverName = conf.driver;
             Class.forName(driverName);
@@ -72,6 +75,6 @@ public class db {
 
         }
         else
-	return(false);*/
+	    return(false);
     }
 }
