@@ -36,7 +36,9 @@ public class db {
 
     public static void main(String[] args) throws Exception {
 
-	if(initDatabase()) {
+	System.out.println(initDatabase());
+
+	if(initDatabase()==1) {
 	    System.out.println("Database open ok.");
 	} else {
 	    System.out.println("Error opening database.");
@@ -44,10 +46,10 @@ public class db {
 
     }
 
-    private static boolean initDatabase() throws Exception {
+    private static int initDatabase() throws Exception {
 
 	cGeneral.cConfig conf=cGeneral.getConfig("config.xml");
-	System.out.println(conf.server);
+	System.out.println(conf.toString());
 
         boolean DriverOk=cGeneral.testDriverInstalation(conf);
 
@@ -71,10 +73,12 @@ public class db {
 
             connection = DriverManager.getConnection(url, username, password);
 
-            return(!connection.isClosed());
+	    System.out.println(connection.isClosed());
+
+            return(!connection.isClosed()?1:0);
 
         }
         else
-	    return(false);
+	    return(2);
     }
 }
