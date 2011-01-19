@@ -16,11 +16,11 @@
         <port>3306</port>
         <ph_name>ucmanage</ph_name>
         <home_name>s7ucm</home_name>
-        <name>ucmanage</name>
+        <name>UCMANAGE</name>
         <ph_username>david</ph_username>
         <home_username>root</home_username>
         <toshiba_username>s7ucm</toshiba_username>
-        <username>david</username>
+        <username>root</username>
         <password>buendia27</password>
 
         <!-- url tag's:
