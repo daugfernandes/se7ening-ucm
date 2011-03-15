@@ -104,7 +104,7 @@ public class cDBEntity
     }
 
     /** Deletes 'this' record.
-     *      Can be "recovered" by simply using Commit function; you should expect a new ID however.
+     *      Can be "recovered" by simply using Save function; you should expect a new ID however.
      *      For that matter test for hasChanghed AND isDeleted.
      * @param conn
      * @return On derivated classes, returns the number os rows deleted (usually 1)
